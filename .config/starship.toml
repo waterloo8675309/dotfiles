@@ -1,0 +1,72 @@
+-- Paste this there:
+--
+-- format = """
+--[┌](bold fg:#f5c2e7)$time$directory$git_branch$git_status$nodejs$python$rust$battery
+--[└](bold fg:#f5c2e7) $character
+--"""
+-- add_newline = false
+--
+-- [character]
+-- success_symbol = "[➜](bold fg:#cba6f7)"
+-- error_symbol = "[✗](bold fg:#f38ba8)"
+--
+-- [directory]
+-- style = "bold fg:#89b4fa"
+-- truncation_length = 3
+-- truncation_symbol = "…/"
+-- read_only = " "
+--
+-- [git_branch]
+-- symbol = "🌱 "
+-- style = "fg:#fab387"
+--
+-- [git_status]
+-- style = "fg:#f9e2af"
+-- conflicted = "⚔️ "
+-- ahead = "⇡${count}"
+-- behind = "⇣${count}"
+-- diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+-- untracked = "✚${count}"
+-- stashed = "📦"
+-- modified = "📝"
+-- staged = "✅"
+-- deleted = "🗑️"
+-- renamed = "➡️"
+--
+-- [nodejs]
+-- symbol = " "
+-- style = "fg:#a6e3a1"
+--
+-- [python]
+-- symbol = " "
+-- style = "fg:#f38ba8"
+--
+-- [rust]
+-- symbol = "🦀 "
+-- style = "fg:#fab387"
+--
+-- [cmd_duration]
+-- min_time = 200
+-- style = "italic fg:#94e2d5"
+-- format = "⏱ [$duration]($style)"
+--
+-- [battery]
+-- full_symbol = "🔋"
+-- charging_symbol = "⚡"
+-- discharging_symbol = "🔌"
+-- disabled = false
+-- format = " [$symbol $percentage]($style)"
+--
+-- [time]
+-- disabled = false
+-- time_format = "%H:%M"
+-- format = "🕒 [$time]($style) "
+-- style = "fg:#b4befe"
+
+-- Zebar directory: ~/.glzr/zebar
+-- Use the 'vanilla-clear' widget copied from make-windows-pretty
+-- Customize style.css to match Catppuccin Mocha
+-- Add Zebar to Windows Startup or launch manually via:
+-- Start-Process "C:\\Program Files\\glzr.io\\Zebar\\zebar.exe"
+
+return config
