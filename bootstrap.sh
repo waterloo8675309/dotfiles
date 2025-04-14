@@ -27,4 +27,10 @@ if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
   echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$HOME/.zshrc"
 fi
 
+# Make Zsh the default shell (if not already)
+if [[ "$SHELL" != "$(which zsh)" ]]; then
+  echo "Changing default shell to Zsh..."
+  chsh -s "$(which zsh)"
+fi
+
 echo "✅ Dotfiles bootstrap complete."
