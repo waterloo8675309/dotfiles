@@ -87,8 +87,20 @@ format = "[ $symbol $version ]($style)"
 
 [battery]
 format = "[🔋$percentage]($style) "
-style = "fg:#66ff66"
 disabled = false
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+[[battery.display]]
+threshold = 30
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
 
 [status]
 style = "fg:#ff6ac1"
