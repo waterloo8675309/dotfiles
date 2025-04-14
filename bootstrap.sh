@@ -33,4 +33,8 @@ if [[ "$SHELL" != "$(which zsh)" ]]; then
   chsh -s "$(which zsh)"
 fi
 
+# Link WezTerm launcher
+mkdir -p "$HOME/.local/share/applications"
+link_config "$REPO_DIR/applications/wezterm.desktop" "$HOME/.local/share/applications/wezterm.desktop"
+
 echo "✅ Dotfiles bootstrap complete."
