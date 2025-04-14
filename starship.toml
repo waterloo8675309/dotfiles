@@ -1,0 +1,101 @@
+# Greg's Cyberpunk Starship Prompt
+add_newline = true
+format = """
+[](#a3aed2)\
+$os\
+$username\
+$hostname\
+[](bg:#3c1361 fg:#a3aed2)\
+$directory\
+[](fg:#3c1361 bg:#52307c)\
+$git_branch\
+$git_status\
+[](fg:#52307c bg:#663399)\
+$nodejs\
+$python\
+$rust\
+$golang\
+$java\
+[](fg:#663399 bg:#2e1a47)\
+$package\
+[ ](fg:#2e1a47)\
+$cmd_duration $jobs $battery\
+$status\
+$character
+"""
+
+[username]
+style_user = "bg:#a3aed2 fg:#090c0c"
+style_root = "bg:#a3aed2 fg:#ff6ac1"
+format = "[$user ]($style)"
+disabled = false
+show_always = true
+
+[hostname]
+style = "bg:#a3aed2 fg:#090c0c"
+format = "[@$hostname ]($style)"
+ssh_only = false
+
+[directory]
+style = "bg:#3c1361 fg:#ffffff"
+format = "[ $path ]($style)"
+truncation_length = 4
+truncate_to_repo = false
+
+[git_branch]
+symbol = ""
+style = "bg:#52307c fg:#ffffff"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:#52307c fg:#ff6ac1"
+format = '([\[$all_status$ahead_behind\]]($style))'
+
+[cmd_duration]
+style = "fg:#e0b0ff"
+format = "[$duration]($style) "
+
+[nodejs]
+symbol = ""
+style = "bg:#663399 fg:#ffffff"
+format = "[ $symbol ($version) ]($style)"
+
+[python]
+symbol = ""
+style = "bg:#663399 fg:#ffffff"
+format = "[ $symbol ($version) ]($style)"
+
+[rust]
+symbol = ""
+style = "bg:#663399 fg:#ffffff"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = ""
+style = "bg:#663399 fg:#ffffff"
+format = "[ $symbol ($version) ]($style)"
+
+[java]
+symbol = ""
+style = "bg:#663399 fg:#ffffff"
+format = "[ $symbol ($version) ]($style)"
+
+[package]
+symbol = "📦"
+style = "bg:#2e1a47 fg:#ffffff"
+format = "[ $symbol $version ]($style)"
+
+[battery]
+format = "[🔋$percentage]($style) "
+style = "fg:#66ff66"
+disabled = false
+
+[status]
+style = "fg:#ff6ac1"
+format = '[✖ $status]($style) '
+disabled = false
+
+[character]
+success_symbol = "[❯](bold fg:#66ffcc)"
+error_symbol = "[❯](bold fg:#ff6ac1)"
+vicmd_symbol = "[❮](bold fg:#9aedfe)"
