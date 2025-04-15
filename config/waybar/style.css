@@ -22,6 +22,28 @@ window#waybar {
   border-bottom: 2px solid #ff6ac1;
 }
 
-#clock, #cpu, #memory, #battery, #pulseaudio, #tray {
+#clock, #cpu, #memory, #battery, #pulseaudio, #network, #temperature, #custom-weather,
+#custom-kernel, #custom-uptime, #custom-disk {
   margin: 0 8px;
+}
+
+#temperature.critical {
+  color: #ff6ac1;
+}
+
+#network.disconnected {
+  color: #ff4444;
+}
+
+#battery.charging {
+  color: #66ff66;
+}
+
+#battery.warning {
+  color: #ffff66;
+}
+
+#custom-weather {
+  font-weight: bold;
+  color: #7afde2;
 }
