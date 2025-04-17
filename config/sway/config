@@ -1,0 +1,16 @@
+# ~/.config/sway/config - Modular Cyberpunk Sway Config
+
+include theme.conf
+include binds.conf
+include autostart.conf
+
+# Base Mod Key
+set $mod Mod4
+
+
+
+
+
+
+
+

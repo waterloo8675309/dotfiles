@@ -37,4 +37,31 @@ fi
 mkdir -p "$HOME/.local/share/applications"
 link_config "$REPO_DIR/applications/wezterm.desktop" "$HOME/.local/share/applications/wezterm.desktop"
 
+# -----------------------------
+# Install essential packages
+# -----------------------------
+sudo apt update && sudo apt install -y \
+  jq htop curl wget unzip git \
+  wl-clipboard xdg-desktop-portal xdg-desktop-portal-wlr \
+  xwayland libxcb-util1 dbus-user-session \
+  libinput-bin libseat1 seatd \
+  libwayland-dev wayland-protocols \
+  swaybg swaylock swayidle \
+  rofi wl-clipboard \
+  waybar \
+  pipewire wireplumber \
+  playerctl grim slurp \
+  pavucontrol \
+  fonts-jetbrains-mono \
+  build-essential cmake meson ninja-build \
+  libx11-dev libxft-dev libxinerama-dev libxcursor-dev libgl1-mesa-dev libxrandr-dev
+
+# Reload dbus if needed
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+  export $(dbus-launch)
+fi
+
+echo "✅ Core system packages installed and environment ready."
+
+
 echo "✅ Dotfiles bootstrap complete."

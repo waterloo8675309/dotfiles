@@ -1,0 +1,19 @@
+#cpu {
+  color: #66ccff;
+}
+
+#custom-cpu_temp {
+  color: #ff99cc;
+  padding: 0 8px;
+}
+
+#custom-fan {
+  color: #7afde2;
+  padding: 0 8px;
+}
+
+#cpu,
+#custom-cpu_temp,
+#custom-fan {
+  font-weight: bold;
+}

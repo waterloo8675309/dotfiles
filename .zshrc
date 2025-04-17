@@ -1,3 +1,4 @@
+export PATH="$HOME/swaylock-effects/build:$PATH"
 # Created by newuser for 5.8.1
 # ~/.zshrc
 
