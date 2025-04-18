@@ -1,0 +1,13 @@
+# Use Super as the mod key
+set $mod Mod4
+
+# Include modular configs
+include ~/.config/i3/theme.conf
+include ~/.config/i3/binds.conf
+include ~/.config/i3/autostart.conf
+
+# Fallback terminal (until we hook up wezterm)
+bindsym $mod+Return exec wezterm
+
+# Lock screen
+bindsym $mod+L exec ~/.config/i3/scripts/lockscreen.sh
