@@ -1,0 +1,19 @@
+#!/bin/bash
+
+exec > "$HOME/.bspwm.log" 2>&1
+echo "bspwmrc STARTED at $(date)" > "$HOME/test.txt"
+
+# Hotkeys
+sxhkd &
+
+# Wallpaper
+feh --bg-scale "$HOME/.config/wallpapers/cyberpunk.jpg" &
+
+# Compositor
+picom --config "$HOME/.config/picom/picom.conf" &
+
+# Polybar
+"$HOME/.config/polybar/launch.sh" &
+
+# Mouse pointer
+xsetroot -cursor_name left_ptr
