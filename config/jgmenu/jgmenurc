@@ -1,0 +1,12 @@
+columns = 1
+terminal = wezterm
+menu_width = 240
+item_height = 30
+font = JetBrainsMono Nerd Font 11
+
+color_menu_bg    = rgba(10,10,10,0.96)
+color_norm_fg    = #FFFFFF
+color_sel_bg     = #A733FF
+color_sel_fg     = #0A0A0A
+color_border     = #A733FF
+border_width     = 2
