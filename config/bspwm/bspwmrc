@@ -1,19 +1,23 @@
 #!/bin/bash
 
+# Log all output
 exec > "$HOME/.bspwm.log" 2>&1
 echo "bspwmrc STARTED at $(date)" > "$HOME/test.txt"
 
-# Hotkeys
-sxhkd &
-
-# Wallpaper
+# Set wallpaper
 feh --bg-scale "$HOME/.config/wallpapers/cyberpunk.jpg" &
 
-# Compositor
+# Start compositor
 picom --config "$HOME/.config/picom/picom.conf" &
 
-# Polybar
+# Launch top polybar
 "$HOME/.config/polybar/launch.sh" &
 
-# Mouse pointer
+# Launch left tint2 bar
+tint2 -c "$HOME/.config/tint2/leftbar.tint2rc" &
+
+# Start keybindings
+sxhkd &
+
+# Set mouse cursor
 xsetroot -cursor_name left_ptr
