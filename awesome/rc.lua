@@ -1,0 +1,1 @@
+-- (paste in the rc.lua snippet we drafted earlier)
